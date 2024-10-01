@@ -12,7 +12,7 @@ interface Step2_3Props {
     nextStep: () => void;  // Function to go to the next step
 }
 
-const Step2_3 = ({ adminConfig, step,nextStep, previousStep,email }:Step2_3Props) => {
+const Step2_3:React.FC<Step2_3Props>  = ({ adminConfig, step,nextStep, previousStep,email }:Step2_3Props) => {
   
   const [currentStep, setCurrentStep] = useState(step); // Start from Step 2
   const [aboutMe, setAboutMe] = useState('');
