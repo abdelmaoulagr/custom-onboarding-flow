@@ -1,0 +1,285 @@
+/* Container for the entire form */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: box-shadow 0.3s ease-in-out;
+  position: relative; 
+  top: -100px;
+}
+
+/* Add hover effect to the card to give a more modern feel */
+.formContainer:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Form title */
+.formTitle {
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Input fields */
+.inputField {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input hover and focus effect */
+.inputField:focus {
+  border-color: #0d7ffa;
+  box-shadow: 0 0 5px rgba(118, 199, 192, 0.3);
+  outline: none;
+}
+
+
+/* Container for the back and finish buttons */
+.buttonContainer {
+  display: flex;
+  justify-content: space-between; /* Align Back to the left and Finish to the right */
+  margin-top: 20px;
+  width: 100%;
+  gap:40px
+}
+
+/* Back Button */
+.backButton {
+  background-color: #6c757d; /* Grey for Back button */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.backButton:hover {
+  background-color: #5a6268; /* Darker grey on hover */
+}
+
+
+/* Submit button */
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submitButton:hover {
+  background-color: #3f6ea0;
+}
+
+/* About Me textarea */
+.textArea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* TextArea hover effect */
+.textArea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(118, 199, 192, 0.3);
+  outline: none;
+}
+
+/* Address form container */
+.addressContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Address fields */
+.addressField {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.addressField:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(118, 199, 192, 0.3);
+  outline: none;
+}
+
+/* Birthday input */
+.birthdayField {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.birthdayField:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(118, 199, 192, 0.3);
+  outline: none;
+}
+
+/* Align button with slight margin for breathing space */
+.buttonContainer {
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+
+/* Admin Form Styles */
+
+
+.adminForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stepConfig {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.checkboxLabel input {
+  margin-right: 10px;
+}
+
+
+
+/* Data table Styles */
+
+
+/* Table Container */
+.tableContainer {
+  width: 100%;
+  max-width: 1090px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow-x: auto;
+}
+
+/* Data Table Styling */
+.dataTable {
+  width: 100%;
+  min-width: 700px; 
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+}
+
+/* Table Header Styling */
+.dataTable thead th {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Table Row Styling */
+.dataTable tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Table Cell Styling */
+.dataTable td, .dataTable th {
+  padding: 12px;
+  text-align: left;
+}
+
+/* Zebra Stripes for Table Rows */
+.dataTable tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Table Row Hover Effect */
+.dataTable tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Table Cell Focus Effect */
+.dataTable td:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(118, 199, 192, 0.3);
+  outline: none;
+}
+
+/* Pagination Container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+
