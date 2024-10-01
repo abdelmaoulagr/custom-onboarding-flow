@@ -22,19 +22,23 @@ const Onboarding = () => {
 
 
   // Function to fetch the Admin configurations from backend API
-  // const fetchConfig = async () => {
-  //         try {
-  //           const response = await fetch('http://localhost:5000/api/users/adminConfig');
-  //           if (!response.ok) {
-  //             throw new Error('Failed to fetch admin configurations');
-  //           }
+  const fetchConfig = async () => {
+          // try {
+          //   const response = await fetch('http://localhost:5000/api/users/adminConfig');
+          //   if (!response.ok) {
+          //     throw new Error('Failed to fetch admin configurations');
+          //   }
 
-  //           const config = await response.json();
-  //           setadminConfig(config);
-  //         } catch (err) {
-  //           console.error('Error fetching admin configuratrions:', err);
-  //         }
-  //       };
+          //   const config = await response.json();
+            const config={
+                  step2: ["aboutMe","address"],
+                  step3: ["birthday"],
+                }
+             setadminConfig(config);
+          // } catch (err) {
+          //   console.error('Error fetching admin configuratrions:', err);
+          // }
+        };
 
 
   // Function to save current step to Session
@@ -63,7 +67,7 @@ const Onboarding = () => {
     setCurrentStep(next);
     setEmail(storedEmail ? storedEmail: email);
     saveCurrentStepToSession(next);
-    // fetchConfig();
+    fetchConfig();
   };
 
   // Function of 'previous' button
@@ -71,13 +75,13 @@ const Onboarding = () => {
     const prev = currentStep - 1;
     setCurrentStep(prev);
     saveCurrentStepToSession(prev);
-    // fetchConfig();
+    fetchConfig();
 
   };
 
 useEffect(() => {
 
-    // fetchConfig();
+    fetchConfig();
     const storedEmail=getEmailFromSession();
     if (storedEmail) {
       setEmail(storedEmail);  // Set the email if found in sessionStorage
