@@ -19,12 +19,11 @@ const Onboarding = () => {
   });
   const [email, setEmail] = useState('');
   const [currentStep, setCurrentStep] = useState(1); // Tracks which step the user is on
-   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   // Function to fetch the Admin configurations from backend API
   const fetchConfig = async () => {
           try {
-            const response = await fetch('${apiUrl}api/users/adminConfig');
+            const response = await fetch('${process.env.NEXT_PUBLIC_API_UR}api/users/adminConfig');
             if (!response.ok) {
               throw new Error('Failed to fetch admin configurations');
             }
