@@ -5,7 +5,7 @@ import BirthdayForm from '@/components/BirthdayForm';
 import styles from '@/styles/formStyles.module.css'
 
 interface Step2_3Props {
-    adminConfig: { step2: string[]; step3: string[] };  // Admin configuration for steps
+    adminConfig: { step2: string[]; step3: string[]; };  // Admin configuration for steps
     step: number;  // the number  of the step  
     email: string // the user's email
     previousStep: () => void;  // Function to go to the previous step
