@@ -38,7 +38,7 @@ Make sure you have the following installed on your machine:
 
 1. **Clone the repository**:
    ```bash
-   git clone 
+   git clone  https://github.com/abdelmaoulagr/custom-onboarding-flow.git 
    cd custom-onboarding-flow
 
 2. **Install dependencies**:
