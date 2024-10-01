@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import AboutMeForm from '@/components/AboutMeForm';
 import AddressForm from '@/components/AddressForm';
 import BirthdayForm from '@/components/BirthdayForm';
