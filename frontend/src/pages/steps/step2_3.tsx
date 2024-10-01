@@ -29,7 +29,7 @@ const Step2_3 = ({ adminConfig, step,nextStep, previousStep,email }:Step2_3Props
   const handleNext = () => {
       if (currentStep == 2) {
       setCurrentStep(currentStep + 1);
-      nextStep && nextStep();  // Call external nextStep function
+      nextStep();  // Call external nextStep function
       } else {
       handleFormSubmit();  // Submit form data on the final step
       }
@@ -40,7 +40,7 @@ const Step2_3 = ({ adminConfig, step,nextStep, previousStep,email }:Step2_3Props
       if (currentStep == 3) {
       setCurrentStep(currentStep - 1);
       }
-      previousStep && previousStep();  // Call external previousStep function
+      previousStep();  // Call external previousStep function
   };
 
 
