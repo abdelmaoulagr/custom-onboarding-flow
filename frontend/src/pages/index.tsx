@@ -15,7 +15,7 @@ const Onboarding = () => {
 
   const [adminConfig, setadminConfig] = useState<AdminConfig>({
     step2: ["aboutMe","address"],
-    step3: ["birthday"],
+    step3: ["birthday"]
   });
   const [email, setEmail] = useState('');
   const [currentStep, setCurrentStep] = useState(1); // Tracks which step the user is on
@@ -32,7 +32,7 @@ const Onboarding = () => {
           //   const config = await response.json();
             const config={
                   step2: ["aboutMe","address"],
-                  step3: ["birthday"],
+                  step3: ["birthday"]
                 }
              setadminConfig(config);
           // } catch (err) {
