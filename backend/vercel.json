@@ -13,7 +13,7 @@
   "routes": [
     {
       "src": "/api/users/(.*)",
-      "dest": "/"
+      "dest": "/server.js"
     }
   ]
 }
