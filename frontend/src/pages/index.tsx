@@ -19,25 +19,21 @@ const Onboarding = () => {
   });
   const [email, setEmail] = useState('');
   const [currentStep, setCurrentStep] = useState(1); // Tracks which step the user is on
-
+   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   // Function to fetch the Admin configurations from backend API
   const fetchConfig = async () => {
-          // try {
-          //   const response = await fetch('http://localhost:5000/api/users/adminConfig');
-          //   if (!response.ok) {
-          //     throw new Error('Failed to fetch admin configurations');
-          //   }
+          try {
+            const response = await fetch('${apiUrl}api/users/adminConfig');
+            if (!response.ok) {
+              throw new Error('Failed to fetch admin configurations');
+            }
 
-          //   const config = await response.json();
-            const config={
-                  step2: ["aboutMe","address"],
-                  step3: ["birthday"]
-                }
-             setadminConfig(config);
-          // } catch (err) {
-          //   console.error('Error fetching admin configuratrions:', err);
-          // }
+            const config = await response.json();
+         setadminConfig(config);
+          } catch (err) {
+            console.error('Error fetching admin configuratrions:', err);
+          }
         };
 
 
