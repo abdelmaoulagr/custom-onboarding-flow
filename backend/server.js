@@ -22,10 +22,17 @@ client.connect()
     db = client.db('onboarding-flow');
     console.log('MongoDB connected');
 
-    // // Start the server
-    // const PORT = process.env.PORT || 5000;
-    // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-    // Simple API route for testing
+    // Start the server
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    
+    
+    // Export the app (required for Vercel)
+    // module.exports = app;
+  })
+  .catch(err => console.error('Error connecting to MongoDB:', err));
+  
+  // Simple API route for testing
     app.get('/', (req, res) => {
       res.send('Backend is running');
     });
@@ -36,10 +43,3 @@ client.connect()
       req.db = db;
       next();
     }, userRoutes);
-
-    // Export the app (required for Vercel)
-    module.exports = app;
-  })
-  .catch(err => console.error('Error connecting to MongoDB:', err));
-
-
