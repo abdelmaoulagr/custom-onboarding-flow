@@ -1,6 +1,7 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const cors = require('cors');
+const userRoutes = require('./routes/userRoutes');
 require('dotenv').config();
 
 const app = express();
@@ -24,21 +25,21 @@ client.connect()
     // // Start the server
     // const PORT = process.env.PORT || 5000;
     // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-    
+    // Simple API route for testing
+    app.get('/', (req, res) => {
+      res.send('Backend is running');
+    });
+
+    // Import user routes
+
+    app.use('/api/users', (req, res, next) => {
+      req.db = db;
+      next();
+    }, userRoutes);
+
     // Export the app (required for Vercel)
     module.exports = app;
   })
   .catch(err => console.error('Error connecting to MongoDB:', err));
 
-// Simple API route for testing
-app.get('/', (req, res) => {
-  res.send('Backend is running');
-});
-
-// Import user routes
-const userRoutes = require('./routes/userRoutes');
-app.use('/api/users', (req, res, next) => {
-  req.db = db;
-  next();
-}, userRoutes);
 
