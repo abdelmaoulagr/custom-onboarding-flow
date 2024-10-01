@@ -1,7 +1,7 @@
 // frontend/pages/index.tsx
 import React, { useState, useEffect } from 'react';
-import Step1 from './steps/step1';
-import Step2_3 from './steps/step2_3';
+import Step1 from '@/pages/steps/step1';
+import Step2_3 from '@/pages/steps/step2_3';
 import styles from '@/styles/formStyles.module.css';
 
 
@@ -9,7 +9,7 @@ import styles from '@/styles/formStyles.module.css';
 interface AdminConfig {
   step2: string[];
   step3: string[];
-}
+};
 
 const Onboarding = () => {
 
@@ -53,7 +53,7 @@ const Onboarding = () => {
   const getEmailFromSession=() =>{
     const storedEmail = sessionStorage.getItem('email');
     return storedEmail;
-  }
+  };
 
   // Function of 'next' button
   const nextStep = () => {

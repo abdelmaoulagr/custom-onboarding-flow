@@ -10,7 +10,7 @@ interface Step2_3Props {
     email: string // the user's email
     previousStep: () => void;  // Function to go to the previous step
     nextStep: () => void;  // Function to go to the next step
-}
+};
 
 const Step2_3:React.FC<Step2_3Props>  = ({ adminConfig, step,nextStep, previousStep,email }:Step2_3Props) => {
   
