@@ -24,6 +24,9 @@ client.connect()
     // // Start the server
     // const PORT = process.env.PORT || 5000;
     // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    
+    // Export the app (required for Vercel)
+    module.exports = app;
   })
   .catch(err => console.error('Error connecting to MongoDB:', err));
 
