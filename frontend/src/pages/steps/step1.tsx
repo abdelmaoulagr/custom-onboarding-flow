@@ -41,9 +41,9 @@ const Step1: React.FC<Step1Props> = ({ nextStep }) => {
       console.log("Registered succefully");
       // Move to the next step 
       nextStep();
-    } catch (err) {
-      console.error('Error:', err);
-      // setError('An error occurred. Please try again.');
+    } catch (error) {
+      console.error('Error:', error);
+      setError('An error occurred. Please try again.');
     }
   };
 
