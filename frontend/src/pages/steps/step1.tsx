@@ -43,7 +43,7 @@ const Step1: React.FC<Step1Props> = ({ nextStep }) => {
       nextStep();
     } catch (err) {
       console.error('Error:', err);
-      setError('An error occurred. Please try again.');
+      // setError('An error occurred. Please try again.');
     }
   };
 
@@ -72,9 +72,9 @@ const Step1: React.FC<Step1Props> = ({ nextStep }) => {
             required
           />
         </div>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
         <button type="submit">Next</button>
       </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   </div>
     
