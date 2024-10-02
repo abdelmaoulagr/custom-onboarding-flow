@@ -92,7 +92,7 @@ const Step2_3:React.FC<Step2_3Props>  = ({ adminConfig, step,nextStep, previousS
   };
 
   // Get the admin configuration for the current step
-  const currentStepConfig = currentStep === 2 ? adminConfig.step2 : adminConfig.step3;
+  const currentStepConfig = currentStep === 2 ? adminConfig?.step2 : adminConfig?.step3;
 
   return ( 
   <div className="container">
@@ -105,7 +105,7 @@ const Step2_3:React.FC<Step2_3Props>  = ({ adminConfig, step,nextStep, previousS
             }}
           >
             {/* Render form components dynamically based on admin configuration */}
-            {currentStepConfig.map((component) => renderFormComponent(component))}
+            {currentStepConfig?.map((component) => renderFormComponent(component))}
 
             <div className={styles.buttonContainer}>
               {currentStep > 2 && (

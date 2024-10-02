@@ -30,7 +30,7 @@ const AdminConfigForm = () => {
 
 
         // Set step3 components to true, but ensure step2 counterpart is false
-        config.step3.forEach(component => {
+        config?.step3?.forEach(component => {
             initialIsChecked[`step3-${component}`] = true;
             if (!config.step2.includes(component)) {
             initialIsChecked[`step2-${component}`] = false; // Only set to false if not in step2
