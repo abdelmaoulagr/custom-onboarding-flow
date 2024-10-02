@@ -55,7 +55,7 @@ const Step2_3:React.FC<Step2_3Props>  = ({ adminConfig, step,nextStep, previousS
 
     try {
 
-      const response = await fetch('${process.env.NEXT_PUBLIC_API_UR}api/users/addInfos', {
+      const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}api/users/addInfos', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

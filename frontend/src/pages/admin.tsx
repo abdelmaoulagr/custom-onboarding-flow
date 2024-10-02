@@ -17,7 +17,7 @@ const AdminConfigForm = () => {
   useEffect(() => {
     const fetchConfig = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/users/adminConfig');
+        const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}api/users/adminConfig');
         const config: AdminConfig = await response.json();
 
         // Initialize isChecked based on the config from the database
