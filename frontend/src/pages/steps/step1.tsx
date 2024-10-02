@@ -22,7 +22,7 @@ const Step1: React.FC<Step1Props> = ({ nextStep }) => {
     const currentStep = 2; // Set current step to 2 after completing step 1
     
     try {
-      const response = await fetch('${process.env.NEXT_PUBLIC_API_UR}api/users/register', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_UR}api/users/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

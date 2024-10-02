@@ -17,7 +17,7 @@ const AdminConfigForm = () => {
   useEffect(() => {
     const fetchConfig = async () => {
       try {
-        const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}api/users/adminConfig');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/users/adminConfig`);
         const config: AdminConfig = await response.json();
 
         // Initialize isChecked based on the config from the database
@@ -129,7 +129,7 @@ const AdminConfigForm = () => {
 
     
     try {
-      const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}api/users/adminConfig', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/users/adminConfig`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -137,7 +137,6 @@ const AdminConfigForm = () => {
         body: JSON.stringify(config),
       });
       if (response.ok) {
-        console.log(isChecked)
         console.log(config);
         alert('Configuration updated successfully!');
       } else {

@@ -23,7 +23,7 @@ const Onboarding = () => {
   // Function to fetch the Admin configurations from backend API
   const fetchConfig = async () => {
           try {
-            const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}api/users/adminConfig');
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/users/adminConfig`);
             if (!response.ok) {
               throw new Error('Failed to fetch admin configurations');
             }

@@ -9,6 +9,7 @@ This is a full-stack web application for customizing user onboarding flows. Admi
 - [API Endpoints](#api-endpoints)
 - [Running the App](#running-the-app)
 - [Admin Configuration](#admin-configuration)
+- [Users Data](#users-data)
 
 ## Features
 
@@ -65,7 +66,7 @@ Make sure you have the following installed on your machine:
 ## API Endpoints
 
 - **PUST /api/users/register**: Registers a new user with email and password.
-- **PUST /api/users/addInfos**: Adds personal information ( address, about me, birthdate) for a user.
+- **PUT /api/users/addInfos**: Adds personal information ( address, about me, birthdate) for a user.
 - **GET /api/users/allUsers**: Fetches all users data.
 - **GET /api/adminConfig**: Fetches the admin configuration for steps 2 and 3.
 - **PUT /api/adminConfig**: Updates the admin configuration.
@@ -98,3 +99,12 @@ The onboarding process can be customized by updating the admin configuration sto
 **To update the configuration**:
 1. Go to /admin and make your selections.
 2. Submit the form to update which components are shown in each step of the onboarding process.
+
+## Users Data
+
+All registered users' data can be viewed by accessing the `/data` endpoint. This page displays a simple HTML table with user information.
+
+**Access the Users Data**:
+- **URL**: /data
+- **Method**: GET
+- **Description**: Fetches and displays all users' information stored in the database. No authentication is required for accessing this page.
